@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    /* scrolling in x direction is hideen and in y direction is auto */
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* for 3d  */
+    perspective: 60px;
+}
+/* containing images and heading called container */
+.container{
+
+    position: relative;
+    height: 100%;
+    /* container converts into flex */
+    display: flex;
+    /* to bring the text in center we use following two attributes */
+    justify-content: center;
+    align-items: center;
+    /* for 3d avoiding 2d */
+    transform-style: preserve-3d;
+    /* for controlling the image layering */
+    z-index: -1;
+}
+/* translate background image using class */
+.background{
+    transform: translateZ(-40px) scale(5);
+    
+
+}
+
+/* tanslate forground image using class */
+.forground{
+    transform: translateZ(-20px) scale(3);
+    position: relative;
+    bottom: 35px;
+    left: 10%;
+    
+}
+/* overlap the two images using multiple selector and postion absolute */
+.background,.forground{
+    position: absolute;
+    
+    /* for controlling the stretching image */
+    object-fit: cover;
+     /* for controlling the image layering by default index 0 agar jyada raha toh chup jayega image otherwise dikhega */
+    z-index: -1;
+}  
+
+h1{
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 4px;
+    font-size: 5rem;
+    color:white;
+    text-shadow: 0 0 10px rgba(0,0,0,3); 
+}
+/* add the background color and color and padding whatever given in the parallax website */
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0;
+}
+.secHeading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+/* setting of biking surfing and para gliding */
+.bg{
+   position: relative;
+   width: 100%;
+   /* background image will not be scrolled */
+   background-attachment: fixed;
+   /* uncle ekdam center mein aagye */
+   background-size: cover;
+   background-position: center;
+   /* set the height */
+   height: 600px;
+}
+
+.desc{
+   position: absolute;
+   background-color: white;
+   padding: 0.5rem 2.5rem;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   color: black;
+   font-size: 3.5rem;
+   font-weight: 600;
+}
+/* bg1 is for to add the image using attribute background image and giving path */
+.bg1{
+    background-image: url(./Images/R.jpg);
+}
+
+.bg2{
+    background-image: url(./Images/landscape-nature-view-background-view-window-landscape-nature-view-background-view-window-wonderful-landscape-121459679.jpg);
+}
+
+.bg3{
+    background-image: url(./Images/OIP.jpg);
+}
