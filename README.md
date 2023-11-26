@@ -1,5 +1,5 @@
 
-# Port_Folio
+# Parallax_Effect
 
 It is Parallax Effect Website.It has been made using HTML and CSS.In this Website,when you scroll down ,
 you will see one image override on another image and after text image will be changed . this concept is likely based on concept of Relative Motion.
